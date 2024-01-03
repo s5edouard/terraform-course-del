@@ -1,7 +1,7 @@
 #!/bin/bash
 # List of Terraform versions and corresponding binary names
 terraform_versions=("0.12.30" "0.13.0" "0.14.0" "1.0.0" "1.2.6" "1.0.0")
-terraform_bin_names=("tf12" "tf13" "tf14" "tf1" "tf126" "terrafrom")
+terraform_bin_names=("tf12" "tf13" "tf14" "tf1" "tf126" "terraform")
 # Ensure that the required packages are installed (assuming Homebrew is available)
 if ! command -v brew &> /dev/null; then
     echo "Homebrew is not installed. Installing Homebrew..."
