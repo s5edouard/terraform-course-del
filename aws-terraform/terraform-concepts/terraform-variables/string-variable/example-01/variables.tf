@@ -2,13 +2,13 @@
 variable "aws_region" {
   type        = string
   description = "AWS region for resources"
-  default     = "us-east-1"
+  default     = "us-east-2"
 }
 
 variable "ec2_instance_ami" {
   type        = string
   description = "AMI ID for the EC2 instance"
-  default     = "ami-0fc5d935ebf8bc3bc"
+  default     = "ami-0256a0be1df3acd7d"
 }
 
 variable "ec2_instance_type" {
@@ -20,19 +20,19 @@ variable "ec2_instance_type" {
 variable "ec2_instance_key_name" {
   type        = string
   description = "Name of the key pair for the EC2 instance"
-  default     = "terraform-aws"
+  default     = "capitaine23"
 }
 
 variable "security_group_ids" {
   type        = list(string)
   description = "List of security group IDs for the EC2 instance"
-  default     = ["sg-0c51540c60857b7ed"]
+  default     = ["sg-0dd9ef5e8e4f5602e"]
 }
 
 variable "subnet_id" {
   type        = string
   description = "Subnet ID for the EC2 instance"
-  default     = "subnet-096d45c28d9fb4c14"
+  default     = "subnet-05ef0188469884b0d"
 }
 
 variable "root_volume_size" {

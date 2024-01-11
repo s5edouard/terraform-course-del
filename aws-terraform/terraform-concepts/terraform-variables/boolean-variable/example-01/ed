@@ -21,19 +21,17 @@ resource "aws_instance" "example" {
   # Create one instance if create_instance is true, otherwise create none
   count = var.create_instance ? 1 : 0
 
-  ami                    = "ami-0fc5d935ebf8bc3bc"
+  ami                    = "ami-05fb0b8c1424f266b"
   instance_type          = "t2.micro"
   key_name               = "capitaine23"
   vpc_security_group_ids = ["sg-0dd9ef5e8e4f5602e"]
   subnet_id              = "subnet-05ef0188469884b0d"
   root_block_device {
-    volume_size = "10"
+    volume_size = "8"
   }
 
   tags = {
-    Name      = "BFA"
+    Name      = "ouaga"
     Create_By = "Terraform"
   }
 }
-
-

@@ -9,20 +9,20 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = "us-east-2"
 }
 
 # Define a local variable to store instance configuration
 locals {
   instance_config = {
-    ami                    = "ami-0fc5d935ebf8bc3bc"
+    ami                    = "ami-012a3e631057deaca"
     instance_type          = "t2.micro"
-    key_name               = "terraform-aws"
-    vpc_security_group_ids = "sg-0c51540c60857b7ed"
-    subnet_id              = "subnet-096d45c28d9fb4c14"
+    key_name               = "capitaine23"
+    vpc_security_group_ids = "sg-0dd9ef5e8e4f5602e"
+    subnet_id              = "subnet-05ef0188469884b0d"
     volume_size            = "10"
     tags = {
-      Name      = "vm"
+      Name      = "BFA"
       Create_By = "Terraform"
     }
   }
