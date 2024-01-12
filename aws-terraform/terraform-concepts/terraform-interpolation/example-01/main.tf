@@ -9,14 +9,14 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = "us-east-2"
 }
 
 variable "tags" {
   type = map(any)
   default = {
-    "id"             = "2560"
-    "owner"          = "DevOps Easy Learning"
+    "id"             = "1345"
+    "owner"          = "BFA-OUAGADOUGOU"
     "teams"          = "DEL"
     "environment"    = "development"
     "project"        = "del"

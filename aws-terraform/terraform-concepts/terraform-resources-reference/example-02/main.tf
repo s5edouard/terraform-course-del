@@ -9,7 +9,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = "us-east-2"
 }
 
 resource "aws_vpc" "example_vpc" {
@@ -22,13 +22,21 @@ resource "aws_subnet" "example_subnet" {
 }
 
 resource "aws_instance" "example_instance" {
-  ami           = "ami-0fc5d935ebf8bc3bc"
+  ami           = "ami-0256a0be1df3acd7d"
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.example_subnet.id
-  key_name      = "terraform-aws"
+  key_name      = "capitaine23"
+  root_block_device {
+    volume_size = "10"
+  }
+  tags = {
+    Name      = "capitaine"
+    Create_By = "Terraform"
+  }
 }
 
 output "instance_public_ip" {
+  description = "Public IP address of the EC2 instance"
   value = aws_instance.example_instance.public_ip
 }
 
