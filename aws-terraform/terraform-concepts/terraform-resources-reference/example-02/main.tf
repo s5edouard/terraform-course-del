@@ -33,6 +33,7 @@ resource "aws_instance" "example_instance" {
     Name      = "capitaine"
     Create_By = "Terraform"
   }
+  associate_public_ip_address = true  # Add this line to allocate a public IP
 }
 
 output "instance_public_ip" {
